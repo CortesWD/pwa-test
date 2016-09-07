@@ -54,7 +54,7 @@ gulp.task('sw', function(callback) {
   var rootDir = 'publication';
 
   swPrecache.write(path.join(rootDir, 'service-worker.js'), {
-    staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
+    staticFileGlobs: [rootDir + '/**/*.{js,html,css,gif,svg,eot,ttf,woff}'],
     stripPrefix: rootDir
   
   }, callback);
