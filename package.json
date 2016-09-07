@@ -1,0 +1,23 @@
+{
+  "name": "pokedex-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp watch"
+  },
+  "author": "Cristian Cortés",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "sw-toolbox": "^3.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "sw-precache": "^4.0.0"
+  }
+}
