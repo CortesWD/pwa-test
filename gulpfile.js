@@ -36,10 +36,8 @@ gulp.task('jslibs', function() {
 gulp.task('css', function() {
   return gulp.src('publication/css/**/*.css')
   .pipe(minifyCSS())
-    .pipe(concat('style.min.css'))
-    .pipe(gulp.dest('publication/css'))
-
-
+  .pipe(concat('style.min.css'))
+  .pipe(gulp.dest('publication/css'))
 
 } );
 
@@ -52,11 +50,12 @@ gulp.task('watch', ['browserSync'], function (){
 });
 
 /*Generar Service Worker*/
-gulp.task('generate-service-worker', function(callback) {
+gulp.task('sw', function(callback) {
   var rootDir = 'publication';
 
   swPrecache.write(path.join(rootDir, 'service-worker.js'), {
     staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
     stripPrefix: rootDir
+  
   }, callback);
 });

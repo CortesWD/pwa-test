@@ -1,19 +1,23 @@
 // Use a cacheName for cache versioning
-var cacheName = 'v1:static';
+var cacheName = 'v1:static',
+    cacheFiles = [
+                '/',
+                'css/style.min.css',
+                'js/libs.min.js',
+                'js/app.js',
+                'js/controllers.js',
+                'js/directives.js',
+                'js/filters.js',
+                'js/services.js',
+                'pokemons.json',
+            ]
 
 // During the installation phase, you'll usually want to cache static assets.
 self.addEventListener('install', function(e) {
     // Once the service worker is installed, go ahead and fetch the resources to make this work offline.
     e.waitUntil(
         caches.open(cacheName).then(function(cache) {
-            return cache.addAll([
-                '/',
-                'css/bootstrap.min.css',
-                'css/bootstrap-theme.min.css',
-                'css/main.css',
-                'js/libs.min.js',
-                'pokemons.json',
-            ]).then(function() {
+            return cache.addAll(cacheFiles).then(function() {
                 self.skipWaiting();
             });
         })
