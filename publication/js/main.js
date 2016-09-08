@@ -23,10 +23,13 @@ window.addEventListener('offline', function(e) {
 // Check if the user is connected.
 if (navigator.onLine) {
     // Arrivals.loadData();
-    // window.location = '/';
+    
+    document.getElementById('no-signal').classList.add('hidden');
+
 } else {
     // Show offline message
     // window.location = '/404';
+   document.getElementById('no-signal').classList.add('hidden');
     // Page.showOfflineWarning();
 
 }

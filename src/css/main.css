@@ -7,6 +7,7 @@ body {
 }
 
 .navbar-brand img {
+  display: inline;
   width: 24px;
 }
 
@@ -117,6 +118,10 @@ body {
   border: solid 1px #9b6470;
 }
 
+.navbar-brand{
+  display: inline;
+}
+
 .ng-invalid.ng-dirty {
   border-color: #D9230F;
 }
@@ -124,6 +129,14 @@ body {
 .ng-valid.ng-dirty {
   border-color: #468847;
 }
+
+.no-signal{
+  background-color: #941b0e;
+  color: #fff;
+  margin:auto;
+  padding:10px 20px;
+}
+
 
 .pokemon {
   height: 350px;
@@ -158,4 +171,5 @@ body {
 .pokemon pokemon-type {
   font-size: 22px;
 }
+
 
