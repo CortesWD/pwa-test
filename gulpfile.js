@@ -8,7 +8,7 @@ var gulp = require('gulp'),
   swPrecache = require('sw-precache');
 
 
-/*Recarga server con cambios*/
+/* Recarga server con cambios */
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {

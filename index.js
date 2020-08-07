@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json({ type: 'application/*+json' }));
 
-//Rutas para visualizar
+//Rutas para visualizar //
 
 router.get('/', function (req, res, next) {
 	 res.sendFile(__dirname + '/publication/index.html');
